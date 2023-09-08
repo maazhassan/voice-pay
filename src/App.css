@@ -1,42 +1,67 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Roboto:wght@100;500;900&display=swap');
+
+:root {
+    --square-blue: "#006AFF";
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.container {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: 29%;
+    margin: 25px 0px;
+    padding: 45px 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.login input {
+    border: 1px solid black;
+    margin: 50px 0px;
+    width: 275px;
+    height: 40px;
+    border-radius: 6px;
 }
 
-.card {
-  padding: 2em;
+.login button {
+    border: 1.5px solid #006AFF;
+    width: 125px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 65px 0px;
 }
 
-.read-the-docs {
-  color: #888;
+.login button:hover {
+    background-color: #006AFF;
+    color: white;
+}
+
+.login a {
+    margin: 25px 0px;
+}
+
+.password-span {
+    display: flex;
+    flex-direction: column;
+}
+
+.password-span a {
+    margin: 0px;
+    align-self: flex-end;
+}
+
+.password-span input {
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
