@@ -20,8 +20,8 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    width: 29%;
+    border-radius: 8px;
+    width: 27%;
     margin: 25px 0px;
     padding: 45px 0px;
 }
@@ -35,7 +35,8 @@
 }
 
 .login button {
-    border: 1.5px solid #006AFF;
+    background-color: #006AFF;
+    color: white;
     width: 125px;
     height: 40px;
     border-radius: 5px;
@@ -49,6 +50,7 @@
 
 .login a {
     margin: 25px 0px;
+    color: #1A73E8;
 }
 
 .password-span {
@@ -57,11 +59,15 @@
 }
 
 .password-span a {
-    margin: 0px;
+    margin: 8px 0px;
     align-self: flex-end;
 }
 
 .password-span input {
     margin-top: 20px;
     margin-bottom: 0px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
