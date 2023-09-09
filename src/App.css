@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Roboto:wght@100;500;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Roboto:wght@100;500;900&display=swap');
+
 
 :root {
     --square-blue: "#006AFF";
@@ -22,7 +23,7 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     width: 27%;
-    margin: 25px 0px;
+    margin: 10% 0%;
     padding: 45px 0px;
 }
 
@@ -51,6 +52,7 @@
 .login a {
     margin: 25px 0px;
     color: #1A73E8;
+    text-decoration: none;
 }
 
 .password-span {
@@ -66,6 +68,10 @@
 .password-span input {
     margin-top: 20px;
     margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
 }
 
 a:hover {
