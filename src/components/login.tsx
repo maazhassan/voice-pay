@@ -38,7 +38,10 @@ export default function Login() {
                         <a href="#">Forgot Password?</a> 
                     </span>
 
-                    <motion.button variants={buttonVars} whileHover="whileHover">Login</motion.button>
+                    <Link to="/landing">
+                        <motion.button variants={buttonVars} whileHover="whileHover">Login</motion.button>
+                    </Link>
+                    
                     
                     <span>Don't have an account? <a href="#" className="click-me" style={{color: "#1A73E8"}}>Click here.</a></span>
 
