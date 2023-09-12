@@ -35,7 +35,7 @@ export default function CreateAccount(){
     return(
         <>
           <div className="flex justify-center">
-            <div className="flex flex-col justify-center  mt-[200px] items-center w-[450px] h-[575px] rounded-md text-base border-2 border-square-blue">
+            <div className="flex flex-col justify-center  mt-[200px] items-center w-[450px] h-[575px] rounded-md text-base shadow-2xl ">
 
               <p className="mb-[50px] text-[16px]">Create Account</p>
               <CreateAccountInput
@@ -58,6 +58,7 @@ export default function CreateAccount(){
                 onChange={handlePasswordChange}
                 style={className}
               />
+              
               <motion.button onClick={handleAccountCreation} className="mt-[25px] bg-square-blue w-[115px] h-[43px] rounded-md text-white"
                 whileHover={{scale: 1.05}}
               >Create!</motion.button>
