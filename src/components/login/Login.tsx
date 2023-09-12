@@ -45,19 +45,23 @@ export default function Login() {
           <a href="#" className="text-hyperlink my-2 self-end hover:underline">Forgot Password?</a> 
         </span>
 
-        <motion.button 
-          variants={buttonVars} 
-          whileHover="whileHover"
-          className="bg-square-blue text-white w-[125px] h-[40px] rounded-md my-16"
-        >
-          Login
-        </motion.button>
+        <Link to="/home">
+          <motion.button 
+            variants={buttonVars} 
+            whileHover="whileHover"
+            className="bg-square-blue text-white w-[125px] h-[40px] rounded-md my-16"
+          >
+            Login
+          </motion.button>
+        </Link>
         
-        <span>
+        
+        <span className="flex flex-row">
           Don't have an account?&nbsp;
-          <a href="#" className="text-hyperlink hover:underline">
-            Click here.
-          </a>
+          <Link to="/create">
+            <p className="text-hyperlink hover:underline">Click here.</p>
+          </Link>
+          
         </span>
       </div>
     </div>
