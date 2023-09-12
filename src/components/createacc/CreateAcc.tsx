@@ -17,10 +17,12 @@ export default function CreateAccount(){
 
     function handlePasswordChange(event : React.ChangeEvent<HTMLInputElement>) {
         setPassword(event.target.value);
+        console.log(`Current Password: ${password}`)
     }
 
     function handleEmailChange(event : React.ChangeEvent<HTMLInputElement>) {
         setEmail(event.target.value);
+        console.log(`Current E-mail: ${email}`)
     }
 
     function handleAccountCreation() {
@@ -35,16 +37,19 @@ export default function CreateAccount(){
               <CreateAccountInput
                 inputType="text"
                 placeholder="Enter email..."
+                onChange={handleEmailChange}
               />
 
               <CreateAccountInput 
                 inputType="text"
                 placeholder="Enter username..."
+                onChange={handleUsernameChange}
               />
 
               <CreateAccountInput
                 inputType="password"
                 placeholder="Enter password..."
+                onChange={handlePasswordChange}
               />
               <button onClick={handleAccountCreation}>Create!</button>
             </div>
