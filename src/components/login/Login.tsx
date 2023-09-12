@@ -49,7 +49,7 @@ export default function Login() {
           <motion.button 
             variants={buttonVars} 
             whileHover="whileHover"
-            className="bg-square-blue text-white w-[125px] h-[40px] rounded-md my-16"
+            className="bg-square-blue text-white w-[115px] h-[43px] rounded-md my-16"
           >
             Login
           </motion.button>

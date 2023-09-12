@@ -1,6 +1,7 @@
 import {useState} from "react"
 import { useNavigate } from "react-router-dom";
 import CreateAccountInput from "./CreateAccInput";
+import {motion} from "framer-motion"
 
 
 export default function CreateAccount(){
@@ -8,7 +9,8 @@ export default function CreateAccount(){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
-    const className = "mb-[50px] w-[288px] h-[40px] rounded-md border-2 border-square-blue indent-2.5 text-[14px]";
+    const className = "mb-[50px] w-[288px] h-[40px] rounded-md border border-black indent-2.5 text-[14px]";
+    const navigator = useNavigate();
 
     function handleUsernameChange(event : React.ChangeEvent<HTMLInputElement>){
         setUsername(event.target.value);
@@ -26,7 +28,8 @@ export default function CreateAccount(){
     }
 
     function handleAccountCreation() {
-        return;
+        console.log("Account Created!");
+        navigator("/")
     }
 
     return(
@@ -55,7 +58,9 @@ export default function CreateAccount(){
                 onChange={handlePasswordChange}
                 style={className}
               />
-              <button onClick={handleAccountCreation} className="mt-[25px] bg-square-blue w-[125px] h-[45px] rounded-md text-white">Create!</button>
+              <motion.button onClick={handleAccountCreation} className="mt-[25px] bg-square-blue w-[115px] h-[43px] rounded-md text-white"
+                whileHover={{scale: 1.05}}
+              >Create!</motion.button>
             </div>
           </div>
         </>
