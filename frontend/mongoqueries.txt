@@ -1,0 +1,69 @@
+db.vendors.aggregate([
+    {
+        $match : {vendorName: "Tim Hortons"}
+    },
+    {
+        $unwind: "$items"
+    },
+    {
+        $match: {"items.item_name": "icecap"}
+    },
+    {
+        $unwind: "$items.sizes"
+    },
+    {
+        $match: {"items.sizes.size": "Small"}
+    },
+    {
+        $project: {_id: 0, price: "$items.sizes.price"}
+    }
+])
+
+db.vendors.insertOne({
+    vendorName: "starbucks",
+    sells: ["drinks", "pastries", "baked goods"],
+    items: [
+        {
+            item_name: "ice latte",
+            sizes: [
+                {size: "small", price: 3},
+                {size: "medium", price: 5},
+                {size: "large", price: 7},
+                {size: "extra large", price: 8}
+            ]
+        },
+        {
+            item_name: "breakfast sandwich",
+            price: 5,
+        },
+        {
+            item_name: "vanilla bean frap",
+            sizes: [
+                {size: "small", price: 3},
+                {size: "medium", price: 5},
+                {size: "large", price: 6},
+            ]
+        }
+    ]
+})
+
+db.vendors.aggregate([
+    {
+        $match: {"vendorName": "starbucks"}
+    },
+    {
+        $unwind: "$items"
+    },
+    {
+        $match: {"items.item_name": "ice latte"}
+    },
+    {
+        $unwind: "$items.sizes"
+    },
+    {
+        $match: {"items.sizes.size": "extra large"}
+    },
+    {
+        $project: {_id: 0, "price": "$items.sizes.price"}
+    }
+])
